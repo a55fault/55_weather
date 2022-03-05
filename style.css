@@ -1,0 +1,101 @@
+html {
+    box-sizing: border-box;
+    background-color: antiquewhite;
+}
+.board {
+    padding-left: 10px;
+    padding-top: 16px;
+    width: 621px;
+    height: 462px;
+    background-color: white;
+
+}
+.frame {
+    display: flex; 
+   flex-wrap: wrap;   
+ border: 1px solid;  
+  width: 600px;
+  height: 435px;
+
+
+}
+
+.up {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px;
+    width: 599px;
+    height: 45px;
+}
+
+.left {
+    display: flex;
+    flex-wrap: wrap;
+    border-right: solid 1px;
+    width: 300px;
+    height: 390px;
+}
+
+.right {
+    
+    /* background-color: rgb(138, 34, 34);  */
+    width: 299px;
+    height: 390px;
+}
+
+.rightUp {
+    border-bottom: solid 1px; 
+    width: 298px;
+    height: 60px;
+}
+.tabs {
+    display: flex;
+    align-self: flex-end;    
+    justify-content: space-between;
+    width: 299px;
+    height: 30px;    
+    user-select: none;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    /* padding: 2px 8px; */   
+        cursor: pointer;    
+  }
+  /* .tab>input[type="radio"] {
+    display: none;
+  } */
+  .tab>label {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    padding: 2px 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+  }
+
+  #tab-btn-1:checked~#content-1,
+  #tab-btn-2:checked~#content-2,
+  #tab-btn-3:checked~#content-3 {
+    display: block;
+  }
+
+  .ShownTabs {
+      /* background: #e00fb3; */
+      width: 297px;
+      height: 340px;
+      align-self: flex-start;
+  }
+
+  .ShownTabs>div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
