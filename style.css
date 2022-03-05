@@ -60,9 +60,9 @@ html {
     /* padding: 2px 8px; */   
         cursor: pointer;    
   }
-  /* .tab>input[type="radio"] {
+  .tab>input[type="radio"] {
     display: none;
-  } */
+  }
   .tab>label {
     display: inline-block;
     text-align: center;
