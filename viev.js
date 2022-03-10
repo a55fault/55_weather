@@ -10,7 +10,7 @@ export function tabNowFilling(transmittedWeather) {
    temp.innerHTML = `${celsiusTemp} \u00B0`;
    city.innerHTML = `${transmittedWeather.name}`;
    icon.innerHTML = `${transmittedWeather.weather[0].main}`;
-   weatherIcon.src = `http://openweathermap.org/img/wn/${transmittedWeather.weather[0].icon}.png`
+   weatherIcon.src = `https://openweathermap.org/img/wn/${transmittedWeather.weather[0].icon}.png`
 
 }
 
