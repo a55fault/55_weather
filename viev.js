@@ -19,30 +19,16 @@ export function createLikedCityToHtml(likedCity) {
     <p class="cityName">${likedCity}</p>
     <button class="button ex">x</button>
 </div>`);
-document.querySelector(".cityName").addEventListener("click", refillNow);
    document.querySelector(".button.ex").addEventListener("click", prepareToDeleteFunction);
 }
 
- function prepareToDeleteFunction () {
-deleteTargetDom = this.parentNode.id;
- this.parentNode.remove();
- deleteFunction(deleteTargetDom)
- 
+function prepareToDeleteFunction() {
+   deleteTargetDom = this.parentNode.id;
+   this.parentNode.remove();
+   deleteFunction(deleteTargetDom)
+
 }
 
-function refillNow () {
-  let cityToSearch = this.parentNode.id;
-  /* alert (cityToSearch) */
-   let weather;
-   const apiKey = "f660a2fb1e4bad108d6160b7f58c555f";
-const serverUrl = "http://api.openweathermap.org/data/2.5/weather";
-    let url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}`
-    /* alert (url) */
-    fetch(url)
-        .then((response) => response.json())
-        .then((result) => weather = result)        
-        /* alert (weather) */
-    tabNowFilling(weather);
-}
+
 
 
