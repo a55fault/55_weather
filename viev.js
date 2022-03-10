@@ -1,7 +1,7 @@
 import { deleteFunction } from "./main.js";
 export let searchEvent = document.querySelectorAll(".up.searchForm");
 export let likeEvent = document.querySelectorAll(".like.button");
-export let deleteEvent = document.querySelectorAll(".ex.button");
+
 
 let deleteTargetDom;
 
@@ -10,7 +10,7 @@ export function tabNowFilling(transmittedWeather) {
    temp.innerHTML = `${celsiusTemp} \u00B0`;
    city.innerHTML = `${transmittedWeather.name}`;
    icon.innerHTML = `${transmittedWeather.weather[0].main}`;
-   weatherIcon.src = `http://openweathermap.org/img/wn/${transmittedWeather.weather[0].icon}@2x.png`
+   weatherIcon.src = `http://openweathermap.org/img/wn/${transmittedWeather.weather[0].icon}.png`
 
 }
 
@@ -19,7 +19,7 @@ export function createLikedCityToHtml(likedCity) {
     <p class="cityName">${likedCity}</p>
     <button class="button ex">x</button>
 </div>`);
-   
+document.querySelector(".cityName").addEventListener("click", refillNow);
    document.querySelector(".button.ex").addEventListener("click", prepareToDeleteFunction);
 }
 
@@ -28,6 +28,21 @@ deleteTargetDom = this.parentNode.id;
  this.parentNode.remove();
  deleteFunction(deleteTargetDom)
  
+}
+
+function refillNow () {
+  let cityToSearch = this.parentNode.id;
+  /* alert (cityToSearch) */
+   let weather;
+   const apiKey = "f660a2fb1e4bad108d6160b7f58c555f";
+const serverUrl = "http://api.openweathermap.org/data/2.5/weather";
+    let url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}`
+    /* alert (url) */
+    fetch(url)
+        .then((response) => response.json())
+        .then((result) => weather = result)        
+        /* alert (weather) */
+    tabNowFilling(weather);
 }
 
 

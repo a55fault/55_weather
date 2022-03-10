@@ -3,10 +3,10 @@ import { likeEvent } from "./viev.js";
 import { tabNowFilling } from "./viev.js";
 import { createLikedCityToHtml } from "./viev.js";
 
-/* import { deleteEvent } from "./viev.js"; */
 
 
-const apiKey = "f660a2fb1e4bad108d6160b7f58c555f"
+
+const apiKey = "f660a2fb1e4bad108d6160b7f58c555f";
 const serverUrl = "http://api.openweathermap.org/data/2.5/weather";
 let cityToSearch;
 let currentWeather;
@@ -29,18 +29,19 @@ function searchFunction() {
     fetch(url)
         .then((response) => response.json())
         .then((result) => currentWeather = result)
-        .catch(err => alert(err));
+        /* alert (currentWeather) */
+        /* .catch(err => alert(err)); */
     tabNowFilling(currentWeather);
 }
 
 function likeFunction() {
     likedCities.push(cityToSearch);
-    alert(likedCities);
+    /* alert(likedCities); */
     createLikedCityToHtml(cityToSearch);
 }
 
 export function deleteFunction(deleteTargetDom) {
     likedCities.splice(`${deleteTargetDom}`, 1);
-    alert(likedCities);
+    /* alert(likedCities); */
     
 }

@@ -62,7 +62,7 @@ html {
  }
  
 
-  .tabs_block.disabled {
+  .tabs_block {
       /* background: #e00fb3; */
       width: 297px;
       height: 340px;
@@ -78,6 +78,7 @@ html {
   }
 
   .likedCity {
+      cursor: pointer;
     display: flex;
     justify-content: space-between; 
   }
