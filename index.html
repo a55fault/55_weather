@@ -15,22 +15,26 @@
 
         <div class="frame">
 
-            <div class="up">
-                <p>Aktobe</p>
+            <form class="up searchForm" onsubmit="return false">
+                <input type="text" id="textToSearch" placeholder="Город" value="Aktobe">
                 <button>S</button>
-            </div>
+            </form>
 
             <div class="left">
                 
                 <div class="ShownTabs">
                     <div id="tab_01" class="tabs_block">
-                        Содержимое 1...
+                        <p id="temp">--</p>
+                        <p id="city">--</p>
+                        <p id="icon">--</p>
+                        <img class="weaterIcon" id="weatherIcon" src="" alt="">
+                        <button class="button like" id="like">L</button>
                       </div>
-                      <div id="tab_02" class="tabs_block">
-                        Содержимое 2...
+                      <div id="tab_02" class="tabs_block disabled" >
+                        TAB 2
                       </div>
-                      <div id="tab_03" class="tabs_block">
-                        Содержимое 3...
+                      <div id="tab_03" class="tabs_block disabled">
+                        TAB 3
                       </div>
                 </div>
 
@@ -46,13 +50,14 @@
                 <div class="rightUp">
                     <P>Added Locations</P>
                 </div>
+
             </div>
 
 
         </div>
 
     </div>
-
+<script src="main.js" type="module"></script>
 </body>
 
 </html>
