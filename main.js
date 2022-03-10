@@ -28,20 +28,19 @@ function searchFunction() {
     let url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}`
     fetch(url)
         .then((response) => response.json())
-        .then((result) => currentWeather = result)
-    /* alert (currentWeather) */
-    /* .catch(err => alert(err)); */
-    tabNowFilling(currentWeather);
-}
+        .then(tabNowFilling);    
+    
+
+
+} /* .catch(err => alert(err)); */
 
 function likeFunction() {
     likedCities.push(cityToSearch);
-    /* alert(likedCities); */
-    createLikedCityToHtml(cityToSearch);
+        createLikedCityToHtml(cityToSearch);
 }
 
 export function deleteFunction(deleteTargetDom) {
     likedCities.splice(`${deleteTargetDom}`, 1);
-    /* alert(likedCities); */
+    
 
 }
