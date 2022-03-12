@@ -66,12 +66,37 @@ html {
       /* background: #e00fb3; */
       width: 297px;
       height: 340px;
-      align-self: flex-start;
+      
       display: none;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+  }
+
+  .temp {
+      align-self: flex-start;
+      font-size: 40px;
+      margin-left: 20px;
+  }
+
+  .weaterIcon {
+      width: 90px;
+      height: 90px;
+      align-self: center;
+  }
+
+  .city {
+      font-size: 30px;
+      margin-left: 20px;
+  }
+
+  .button.like {
+      width: 30px;
+      align-self: flex-end;
   }
 
   .tabs_block:target {
-      display: block;
+      display: flex;
   }
   .tabs {
       border-top: solid 1px;
@@ -82,3 +107,10 @@ html {
     display: flex;
     justify-content: space-between; 
   }
+
+  .textToSearch {
+      border: none;
+      width: 297px;
+  }
+
+  

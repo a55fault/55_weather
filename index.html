@@ -16,7 +16,7 @@
         <div class="frame">
 
             <form class="up searchForm" onsubmit="return false">
-                <input type="text" id="textToSearch" placeholder="Город" value="Aktobe">
+                <input class="textToSearch" type="text" id="textToSearch" placeholder="Город" value="Aktobe">
                 <button>S</button>
             </form>
 
@@ -24,16 +24,16 @@
                 
                 <div class="ShownTabs">
                     <div id="tab_01" class="tabs_block">
-                        <p id="temp">--</p>
-                        <p id="city">--</p>
-                        <p id="icon">--</p>
+                        <p class="temp" id="temp">--</p>
+                                                
                         <img class="weaterIcon" id="weatherIcon" src="" alt="">
+                        <p class="city" id="city">--</p>
                         <button class="button like" id="like">L</button>
                       </div>
-                      <div id="tab_02" class="tabs_block disabled" >
+                      <div id="tab_02" class="tabs_block" >
                         TAB 2
                       </div>
-                      <div id="tab_03" class="tabs_block disabled">
+                      <div id="tab_03" class="tabs_block">
                         TAB 3
                       </div>
                 </div>

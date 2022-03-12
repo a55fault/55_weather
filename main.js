@@ -28,19 +28,18 @@ function searchFunction() {
     let url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}`
     fetch(url)
         .then((response) => response.json())
-        .then(tabNowFilling);    
-    
+        .then(tabNowFilling)
+        .catch(err => alert(err));
 
-
-} /* .catch(err => alert(err)); */
+}
 
 function likeFunction() {
     likedCities.push(cityToSearch);
-        createLikedCityToHtml(cityToSearch);
+    createLikedCityToHtml(cityToSearch);
 }
 
 export function deleteFunction(deleteTargetDom) {
     likedCities.splice(`${deleteTargetDom}`, 1);
-    
+
 
 }
