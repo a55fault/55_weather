@@ -102,6 +102,11 @@ html {
       border-top: solid 1px;
   }
 
+  .details {
+      font-size: 18px;
+      margin-left: 10px;
+  }
+
   .likedCity {
       cursor: pointer;
     display: flex;

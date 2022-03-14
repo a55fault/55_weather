@@ -22,7 +22,6 @@ for (let elem of likeEvent) {
 
 
 function searchFunction() {
-
     cityToSearch = textToSearch.value;
     /* textToSearch.value = ""; */
     let url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}`
