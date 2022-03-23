@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,24 +7,17 @@
     <title>weatherapp</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <div class="board">
-
         <div class="frame">
-
             <form class="up searchForm" onsubmit="return false">
                 <input class="textToSearch" type="text" id="textToSearch" placeholder="Город" value="">
                 <button>S</button>
             </form>
-
-            <div class="left">
-                
+            <div class="left">                
                 <div class="ShownTabs">
                     <div id="tab_01" class="tabs_block">
-                        <p class="temp" id="temp">--</p>
-                                                
+                        <p class="temp" id="temp">--</p>                                                
                         <img class="weaterIcon" id="weatherIcon" src="" alt="">
                         <p class="city" id="city">--</p>
                         <button class="button like" id="like">L</button>
@@ -36,34 +28,25 @@
                         <p class="details feelsLike">Feels like:</p>
                         <p class="details weather" id="weater">weather:</p>
                         <p class="details sunrise">Sunrise:</p>
-                        <p class="details sunset">Sunset:</p>
-                        
+                        <p class="details sunset">Sunset:</p>                        
                       </div>
                       <div id="tab_03" class="tabs_block">
                         TAB 3
                       </div>
                 </div>
-
                 <div class="tabs">
                    <a href="#tab_01" class="tabs_item">Now</a>
                    <a href="#tab_02" class="tabs_item">Details</a>
                    <a href="#tab_03" class="tabs_item">Forecast</a>
                 </div>
-
             </div>
-
             <div class="right">
                 <div class="rightUp">
                     <P>Added Locations</P>
                 </div>
-
             </div>
-
-
         </div>
-
     </div>
 <script src="main.js" type="module"></script>
 </body>
-
 </html> 

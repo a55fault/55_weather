@@ -2,22 +2,21 @@ html {
     box-sizing: border-box;
     background-color: antiquewhite;
 }
+
 .board {
     padding-left: 10px;
     padding-top: 16px;
     width: 621px;
     height: 462px;
     background-color: white;
-
 }
+
 .frame {
     display: flex; 
    flex-wrap: wrap;   
  border: 1px solid;  
   width: 600px;
   height: 435px;
-
-
 }
 
 .up {
@@ -36,8 +35,7 @@ html {
     height: 390px;
 }
 
-.right {
-    
+.right {    
     /* background-color: rgb(138, 34, 34);  */
     width: 299px;
     height: 390px;
@@ -48,25 +46,24 @@ html {
     width: 298px;
     height: 60px;
 }
+
 .tabs {
     display: flex;
     align-self: flex-end;    
     justify-content: space-between;
     width: 299px;
     height: 30px;      
-        /* cursor: pointer; */
-            
+        /* cursor: pointer; */            
   }
+
  .tabs_item {
      text-decoration: none;
- }
- 
+ } 
 
   .tabs_block {
       /* background: #e00fb3; */
       width: 297px;
-      height: 340px;
-      
+      height: 340px;      
       display: none;
       flex-direction: column;
       flex-wrap: nowrap;

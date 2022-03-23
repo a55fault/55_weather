@@ -1,7 +1,6 @@
-import { deleteFunction } from "./main.js";
+import { deleteOut } from "./main.js";
 export let searchEvent = document.querySelectorAll(".up.searchForm");
 export let likeEvent = document.querySelectorAll(".like.button");
-
 
 let deleteTargetDom;
 
@@ -10,10 +9,8 @@ export function tabNowFilling(transmittedWeather) {
    temp.innerHTML = `${celsiusTemp} \u00B0`;
    city.innerHTML = `${transmittedWeather.name}`;
    weatherIcon.src = `http://openweathermap.org/img/wn/${transmittedWeather.weather[0].icon}@2x.png`
-
    cityNow.innerHTML = `${transmittedWeather.name}`;
    weater.innerHTML = `weather: ${transmittedWeather.weather[0].main}`;
-
 }
 
 export function createLikedCityToHtml(likedCity) {
@@ -21,28 +18,25 @@ export function createLikedCityToHtml(likedCity) {
     <p class="cityName">${likedCity}</p>
     <button class="button ex">x</button>
 </div>`);
-   document.querySelector(".cityName").addEventListener("click", refillNow);
-   document.querySelector(".button.ex").addEventListener("click", prepareToDeleteFunction);
+   document.querySelector(".cityName").addEventListener("click", refillTabNow);
+   document.querySelector(".button.ex").addEventListener("click", prepareToDelete);
 }
 
-function prepareToDeleteFunction() {
+function prepareToDelete() {
    deleteTargetDom = this.parentNode.id;
    this.parentNode.remove();
-   deleteFunction(deleteTargetDom)
-
+   deleteOut(deleteTargetDom);
 }
 
-function refillNow() {
+   function refillTabNow() {
    let cityToSearch = this.parentNode.id;
    let weather;
-   const apiKey = "f660a2fb1e4bad108d6160b7f58c555f";
+   const apiKey = "7616f320a6b51b780c0f577426668068";
    const serverUrl = "https://api.openweathermap.org/data/2.5/weather";
    let url = `${serverUrl}?q=${cityToSearch}&appid=${apiKey}`
    fetch(url)
       .then((response) => response.json())
       .then(tabNowFilling)
-
-
 }
 
 
