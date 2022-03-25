@@ -1,8 +1,17 @@
 import { deleteOut } from "./main.js";
-export let searchEvent = document.querySelectorAll(".up.searchForm");
-export let likeEvent = document.querySelectorAll(".like.button");
+/* export let searchEvent = document.querySelectorAll(".up.searchForm");
+export let likeEvent = document.querySelectorAll(".like.button"); */
+
+export let uiElements = {searchEvent : document.querySelector(".up.searchForm"),
+          likeEvent : document.querySelector(".like.button"),
+
+}
 
 let deleteTargetDom;
+
+//if (localStorage.favorite) {
+    fillOnStart();
+//}
 
 export function tabNowFilling(transmittedWeather) {
    let celsiusTemp = Math.round(Number(transmittedWeather.main.temp) - 273, 15);
@@ -39,4 +48,8 @@ function prepareToDelete() {
       .then(tabNowFilling)
 }
 
-
+function fillOnStart () {
+   let startList = JSON.parse(localStorage.favorite);
+//alert (startList)
+   startList.forEach(createLikedCityToHtml(item));
+}
