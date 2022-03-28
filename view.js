@@ -17,7 +17,7 @@ export function tabNowFilling(transmittedWeather) {
    let celsiusTemp = Math.round(Number(transmittedWeather.main.temp) - 273, 15);
    temp.innerHTML = `${celsiusTemp} \u00B0`;
    city.innerHTML = `${transmittedWeather.name}`;
-   weatherIcon.src = `http://openweathermap.org/img/wn/${transmittedWeather.weather[0].icon}@2x.png`
+   weatherIcon.src = `https://openweathermap.org/img/wn/${transmittedWeather.weather[0].icon}@2x.png`
    cityNow.innerHTML = `${transmittedWeather.name}`;
    weater.innerHTML = `weather: ${transmittedWeather.weather[0].main}`;
 }
@@ -50,6 +50,6 @@ function prepareToDelete() {
 
 function fillOnStart () {
    let startList = JSON.parse(localStorage.favorite);
-//alert (startList)
-   startList.forEach(createLikedCityToHtml(item));
+//alert (typeof(startList))
+   startList.forEach((item) => createLikedCityToHtml(item));
 }
