@@ -9,12 +9,12 @@ export let uiElements = {searchEvent : document.querySelector(".up.searchForm"),
 
 let deleteTargetDom;
 
-//if (localStorage.favorite) {
+if (localStorage.favorite) {
     fillOnStart();
-//}
+}
 
 export function tabNowFilling(transmittedWeather) {
-   let celsiusTemp = Math.round(Number(transmittedWeather.main.temp) - 273, 15);
+   let celsiusTemp = Math.round(Number(transmittedWeather.main.temp) - 273,15);
    temp.innerHTML = `${celsiusTemp} \u00B0`;
    city.innerHTML = `${transmittedWeather.name}`;
    weatherIcon.src = `https://openweathermap.org/img/wn/${transmittedWeather.weather[0].icon}@2x.png`
@@ -50,6 +50,5 @@ function prepareToDelete() {
 
 function fillOnStart () {
    let startList = JSON.parse(localStorage.favorite);
-//alert (typeof(startList))
    startList.forEach((item) => createLikedCityToHtml(item));
 }
